@@ -1,0 +1,11 @@
+{
+  // emmet
+  "editor.quickSuggestions": {
+    "strings": true
+  },
+  "tailwindCSS.includeLanguages": {
+    "plaintext": "html"
+  },
+  // auto complete
+  "tailwindCSS.emmetCompletions": true
+}
