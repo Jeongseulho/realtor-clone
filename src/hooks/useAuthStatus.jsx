@@ -17,4 +17,4 @@ function useAuthStatus() {
   return { loggedIn, checkingStatus };
 }
 
-export default useAuthStatus;
+export { useAuthStatus };
