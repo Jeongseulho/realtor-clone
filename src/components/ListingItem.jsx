@@ -5,7 +5,7 @@ import { MdLocationOn } from "react-icons/md";
 import { FaTrash } from "react-icons/fa";
 import { MdEdit } from "react-icons/md";
 
-function ListingItem({ listing, id, onDelete, onEdit }) {
+function ListingItem({ listing, id, onDelete, onEdit, onTest }) {
   return (
     <li className="relative bg-white flex flex-col justify-between items-center shadow-md hover:shadow-xl rounded-md overflow-hidden transition-shadow duration-150 m-[10px]">
       <Link className="contents" to={`/category/${listing.type}/${id}`}>
@@ -59,13 +59,13 @@ function ListingItem({ listing, id, onDelete, onEdit }) {
       {onDelete && (
         <FaTrash
           className="absolute bottom-2 right-2 h-[14px] cursor-pointer text-red-500"
-          onClick={onDelete}
+          onClick={() => onDelete(id)}
         />
       )}
       {onEdit && (
         <MdEdit
           className="absolute bottom-2 right-7 h-[14px] cursor-pointer text-black-500"
-          onClick={onEdit}
+          onClick={() => onEdit(id)}
         />
       )}
     </li>
