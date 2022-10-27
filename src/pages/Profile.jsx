@@ -62,6 +62,7 @@ function Profile() {
       toast.error("Could not update the profile details");
     }
   }
+
   useEffect(() => {
     async function fetchUserListings() {
       const listingRef = collection(db, "listings");
